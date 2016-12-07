@@ -13,7 +13,15 @@
   sklearn.model_selection.fit_grid_point
 ```
 ## AgglomerativeClustering
-
+<br>
+### 层次聚类
+<br>
+**层次聚类**：一层一层地进行聚类，可以**从下而上地把小的cluster合并聚集**，也可以从上而下地将大的cluster进行分割。一般用得比较多的是从下而上地聚集。具体而言，就是每次找到距离最短的两个cluster，然后进行合并成一个大的cluster，直到全部合并为一个cluster。整个过程就是建立一个**树结构**。<br>
+!(树结构图)[http://attach.dataguru.cn/attachments/portal/201308/30/101335h3te1bxmbk86zeqe.jpg]<br>
+一开始每个数据点独自作为一个类，它们的距离就是这两个点之间的距离。而对于包含不止一个数据点的 cluster，就可以选择多种方法了。最常用的，就是average-linkage，即计算两个cluster各自数据点的两两距离的平均值。类似的 还有single-linkage/complete-linkage，选择两个cluster中距离最短/最长的一对数据点的距离作为类的距离。<br>
+**层次聚类最大的优点**:它一次性地得到了整个聚类的过程，只要得到了上面那样的聚类树，想要分多少个cluster都可以直接根据树结构来得到结果，改变 cluster数目不需要再次计算数据点的归属。层次聚类的缺点是计算量比较大，因为要每次都要计算多个cluster内所有数据点的两两距离。另外，由于层次聚类使用的是贪心算法，得到的显然只是局域最优，不一定就是全局最优。<br>
+**确定最优cluster数的方法**:可以根据聚类过程中，每次合并的两个cluster的距离来作大概判断，如下图。因为总共有2000个数据点，每次合并两个cluster，所以总共要做2000次合并,从图中可以看到在后期合并的两个cluster的距离会有一个陡增。**现实情况下可能没有这么明显**<br>
+!(距离图)[http://attach.dataguru.cn/attachments/portal/201308/30/101415pm8uumher2lpu0mr.jpg]
 ### 参数
 <br>
 AgglomerativeClustering(n_clusters=2, affinity='euclidean', memory=Memory(cachedir=None), connectivity=None, compute_full_tree='auto', linkage='ward', pooling_func=<function mean>) <br>
