@@ -33,3 +33,11 @@ Connectivity matrix. Defines for each sample the neighboring samples following a
 <br>
 4. memory : Instance of joblib.Memory or string (optional) <br>用于缓存树的结果输出，输入为路径字符串，当设定为空值时，结果树将不被储存<br>
 <br>
+5. compute_full_tree : bool or ‘auto’ (optional)<br> 用于控制是否计算整棵树，可有效减少计算时间。<br>
+<br>
+6. linkage : {“ward”, “complete”, “average”}, optional, default: “ward”<br> 
+    用于控制距离的比较方式
+    ward ：以最小方差作为判断标准
+    average：以cluster内各点到新点距离的平均值为判断标准
+    complete：以最大距离作为判断标准
+<br>
