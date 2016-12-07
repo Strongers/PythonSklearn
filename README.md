@@ -15,6 +15,7 @@
 ## AgglomerativeClustering
 
 ### 参数
+<br>
 AgglomerativeClustering(n_clusters=2, affinity='euclidean', memory=Memory(cachedir=None), connectivity=None, compute_full_tree='auto', linkage='ward', pooling_func=<function mean>) <br>
 <br>
 Recursively merges the pair of clusters that minimally increases a given linkage distance. <br>
@@ -44,6 +45,7 @@ Connectivity matrix. Defines for each sample the neighboring samples following a
 7. pooling_func : callable, default=np.mean<br> 用于控制将多个变量合并为一个变量<br>
 <br>
 ### 属性
+<br>
 1. labels_ : array [n_samples]<br> 每个样本的标签<br>
 <br>
 2. n_leaves_ : int <br> 结果树中叶节点的数量<br>
@@ -52,6 +54,7 @@ Connectivity matrix. Defines for each sample the neighboring samples following a
 <br>
 4. children_ : array-like, shape (n_nodes-1, 2) <br> 每个非叶节点的子节点的数量<br>
 ### 方法
+<br>
 1. fit(X[, y])	Fit the hierarchical clustering on the data <br> 输入数据，进行分层聚类运算<br>
 <br>
 2. fit_predict(X[, y])	Performs clustering on X and returns cluster labels. <br> 输入数据X，并输出其标签<br>
