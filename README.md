@@ -31,4 +31,5 @@ Connectivity matrix. Defines for each sample the neighboring samples following a
 3. affinity : string or callable, default: “euclidean” <br>
 距离计算方式，如欧式距离、L2、L1 <br>
 <br>
-4. memory : Instance of joblib.Memory or string (optional) <br>用于缓存树的结果输出，，当设定为空值时，结果树将不被储存
+4. memory : Instance of joblib.Memory or string (optional) <br>用于缓存树的结果输出，输入为路径字符串，当设定为空值时，结果树将不被储存<br>
+<br>
