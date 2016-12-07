@@ -1,7 +1,7 @@
-### Python sklearn 学习笔记
+# Python sklearn 学习笔记
 `By Stronger`
 -----
-### 学习内容
+## 学习内容
 ```
   package sklearn
   sklearn.cluster.AgglomerativeClustering
@@ -37,10 +37,10 @@ Connectivity matrix. Defines for each sample the neighboring samples following a
 5. compute_full_tree : bool or ‘auto’ (optional)<br> 用于控制是否计算整棵树，可有效减少计算时间。<br>
 <br>
 6. linkage : {“ward”, “complete”, “average”}, optional, default: “ward”<br> 
-    用于控制距离的比较方式
-    ward ：以最小方差作为判断标准
-    average：以cluster内各点到新点距离的平均值为判断标准
-    complete：以最大距离作为判断标准
+    用于控制距离的比较方式<br>
+    ward ：以最小方差作为判断标准<br>
+    average：以cluster内各点到新点距离的平均值为判断标准<br>
+    complete：以最大距离作为判断标准<br>
 <br>
 7. pooling_func : callable, default=np.mean<br> 用于控制将多个变量合并为一个变量<br>
 <br>
