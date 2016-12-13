@@ -1,4 +1,5 @@
-### sklearn.model_selection.GridSearchCV  
+#### Hyper-parameter optimizers 超参优化  
+### sklearn.model_selection.GridSearchCV  
 - 用于参数调优,使用CV(交叉验证)方法<br>
 - class sklearn.model_selection.GridSearchCV(estimator, param_grid, scoring=None, fit_params=None, n_jobs=1, iid=True, refit=True, cv=None, verbose=0, pre_dispatch='2*n_jobs', error_score='raise', return_train_score=True) <br>
 ## 参数
