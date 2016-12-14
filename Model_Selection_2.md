@@ -31,5 +31,19 @@
 - return_train_score : boolean, default=True<br>
   - 参数为False时，cv_results_将不包括训练的分数<br>
 ## Attributes<br>
-- cv_results_ : dict of numpy (masked) ndarrays
-- 
+- cv_results_ : dict of numpy (masked) ndarrays<br>
+  - A dict with keys as column headers and values as columns<br>
+- best_estimator_ : estimator<br>
+  - 返回调优结果<br>
+- best_score_ : float<br>
+  - 返回最优模型的分数<br>
+- best_params_ : dict<br>
+  - 返回最优参数<br>
+- best_index_ : int<br>
+  - 返回最优参数，在params中的索引<br>
+- scorer_:function<br>
+  - 返回scoring方法<br>
+- n_splits_ : int<br>
+  - 返回k折交叉检验的K<br>
+## Notes<br>
+- 当n_jobs参数大于1时，数据被拷贝到每个参数的环境中（并不是复制n_jobs个，复制份数和参数的数量相等）。当每个job都耗时较小时可以提高计算效率，当数据集较大时会增加内存消耗。解决该问题的方案为：设置pre_dispatch参数，此时只将pre_dispatch复制多份，pre_dispatch的建议数量为2 * n_jobs<br>
