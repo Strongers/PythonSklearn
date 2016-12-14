@@ -2,6 +2,7 @@
 ### sklearn.model_selection.GridSearchCV  
 - 用于参数调优,使用CV(交叉验证)方法<br>
 - class sklearn.model_selection.GridSearchCV(estimator, param_grid, scoring=None, fit_params=None, n_jobs=1, iid=True, refit=True, cv=None, verbose=0, pre_dispatch='2*n_jobs', error_score='raise', return_train_score=True) <br>
+
 ## 参数
 - estimator:estimator object<br>
   - 分类器对象<br>
@@ -27,6 +28,7 @@
   - 如果在估计量拟合中出现错误，则分配给分数的值。 如果设置为'raise'，则会报错。 如果给出了数值，则引发FitFailedWarning。 此参数不影响refit步骤，这将始终引发错误<br>
 - return_train_score : boolean, default=True<br>
   - 参数为False时，cv_results_将不包括训练的分数<br>
+  
 ## 特性
 - cv_results_ : dict of numpy (masked) ndarrays<br>
   - A dict with keys as column headers and values as columns<br>
@@ -40,6 +42,7 @@
   - 返回scoring方法<br>
 - n_splits_ : int<br>
   - 返回k折交叉检验的K<br>
+  
 ## 方法
 - decision_function(\*args, \*\*kwargs)  
   - Call decision_function on the estimator with the best found parameters<br>
