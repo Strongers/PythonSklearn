@@ -3,6 +3,7 @@
 - 与GridSearchCV区别在于：不是从固定的集合内选取参数，而是从给定的分布中选取一定数量的值作为测试对象，n_iter指定测试对象数量<br>
 - 当给定一个集合作为备选对象时，将对该集合做**无放回**抽样；当给定分布时，将对集合做**有放回**抽样<br>
 - 建议为连续型参数指定连续型分布<br>
+
 ## parameters <br>
 - estimator : estimator object<br>
   - 估计器对象<br>
@@ -30,6 +31,7 @@
   - 如果在估计量拟合中出现错误，则分配给分数的值。 如果设置为'raise'，则会报错。 如果给出了数值，则引发FitFailedWarning。 此参数不影响refit步骤，这将始终引发错误<br>
 - return_train_score : boolean, default=True<br>
   - 参数为False时，cv_results_将不包括训练的分数<br>
+  
 ## Attributes<br>
 - cv_results_ : dict of numpy (masked) ndarrays<br>
   - A dict with keys as column headers and values as columns<br>
@@ -45,5 +47,24 @@
   - 返回scoring方法<br>
 - n_splits_ : int<br>
   - 返回k折交叉检验的K<br>
+  
 ## Notes<br>
 - 当n_jobs参数大于1时，数据被拷贝到每个参数的环境中（并不是复制n_jobs个，复制份数和参数的数量相等）。当每个job都耗时较小时可以提高计算效率，当数据集较大时会增加内存消耗。解决该问题的方案为：设置pre_dispatch参数，此时只将pre_dispatch复制多份，pre_dispatch的建议数量为2 * n_jobs<br>
+
+## 方法
+- decision_function(\*args, \*\*kwargs)  
+  - Call decision_function on the estimator with the best found parameters<br>
+- fit(X[, y, groups])  
+  - 运行调优程序，寻找最优参数  
+- get_params([deep])  
+  - 获取最优参数  
+- inverse_transform(\*args, \*\*kwargs)  
+  - 以下没有说明的都是调用estimator的相应方法  
+- predict(\*args, \*\*kwargs)
+- predict_log_proba(\*args, \*\*kwargs)  
+- predict_proba(\*args, \*\*kwargs)  
+- transform(\*args, \*\*kwargs)
+- score(X[, y])  
+  - 返回给定数据的分数  
+- set_params(\*\*params)  
+  - 设置参数  
