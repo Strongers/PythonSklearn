@@ -1,3 +1,5 @@
+# To test sklearn.model_selection.RandomizedSearchC class
+# compare RandomizedSearch and GridSearch
 import numpy as np
 
 from time import time
