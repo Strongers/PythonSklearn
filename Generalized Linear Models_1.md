@@ -5,8 +5,7 @@
 ### 自动相关性确定(ARD)
 [参考资料](https://mqshen.gitbooks.io/prml/content/Chapter6/gaussian/automatic_relevance_determination.html)
 - ARD核心思想：通过最大似然方法进行的参数最优化，能够将不同输入数据的相对重要性从数据中推断出来<br>
-- 
-
+- ARD与Bayesian Ridge Regression相似，但ARD适用于w为稀疏矩阵；ARD对w采用不同的分布(假设为平行坐标轴的分布)，抛弃了Gaussian 分布中球型的假设<br>
 
 ### sklearn 
 ```
