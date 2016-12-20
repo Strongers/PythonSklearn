@@ -2,10 +2,13 @@
 
 ## By Stronger
 
-### class sklearn.linear_model.ARDRegression(n_iter=300, tol=0.001,<br>
+```
+class sklearn.linear_model.ARDRegression(n_iter=300, tol=0.001,<br>
                                               alpha_1=1e-06, alpha_2=1e-06, lambda_1=1e-06,<br>
                                               lambda_2=1e-06, compute_score=False, threshold_lambda=10000.0, <br>
                                               fit_intercept=True, normalize=False, copy_X=True, verbose=False)<br>
+```
+
 - **贝叶斯ARD回归**使用ARD(automatic relevance detemination)先验拟合回归模型的权重。回归模型的权重假定为高斯分布。还估计参数λ（权重分布的精度）和α（噪声分布的精度）。该估计通过迭代实现<br>
 
 ## parameters
